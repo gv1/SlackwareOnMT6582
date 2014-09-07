@@ -1,0 +1,78 @@
+No device specified, trying to scan all of /dev/input/event*
+Available devices:
+/dev/input/event0:	mtk-kpd
+/dev/input/event1:	ACCDET
+/dev/input/event2:	hwmdata
+/dev/input/event3:	mtk-tpd
+Select the device event number [0-3]: Input driver version is 1.0.1
+Input device ID: bus 0x0 vendor 0x0 product 0x0 version 0x0
+Input device name: "mtk-tpd"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 330 (BTN_TOUCH)
+  Event type 3 (EV_ABS)
+    Event code 0 (ABS_X)
+      Value      0
+      Min        0
+      Max      800
+      Resolution     800
+    Event code 1 (ABS_Y)
+      Value      0
+      Min        0
+      Max      480
+      Resolution     480
+    Event code 24 (ABS_PRESSURE)
+      Value      0
+      Min        0
+      Max      255
+    Event code 48 (ABS_MT_TOUCH_MAJOR)
+      Value      0
+      Min        0
+      Max      100
+    Event code 49 (ABS_MT_TOUCH_MINOR)
+      Value      0
+      Min        0
+      Max      100
+    Event code 53 (ABS_MT_POSITION_X)
+      Value      0
+      Min        0
+      Max      800
+    Event code 54 (ABS_MT_POSITION_Y)
+      Value      0
+      Min        0
+      Max      480
+    Event code 57 (ABS_MT_TRACKING_ID)
+      Value      0
+      Min        0
+      Max        0
+Properties:
+  Property type 1 (INPUT_PROP_DIRECT)
+Testing ... (interrupt to exit)
+Event: time 1409845467.116675, type 1 (EV_KEY), code 330 (BTN_TOUCH), value 1
+Event: time 1409845467.116682, type 3 (EV_ABS), code 48 (ABS_MT_TOUCH_MAJOR), value 1
+Event: time 1409845467.116687, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 115
+Event: time 1409845467.116691, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 96
+Event: time 1409845467.116695, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 1
+Event: time 1409845467.116699, ++++++++++++++ SYN_MT_REPORT ++++++++++++
+Event: time 1409845467.116703, -------------- SYN_REPORT ------------
+Event: time 1409845467.133145, type 3 (EV_ABS), code 48 (ABS_MT_TOUCH_MAJOR), value 1
+Event: time 1409845467.133151, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 115
+Event: time 1409845467.133155, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 96
+Event: time 1409845467.133160, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 1
+Event: time 1409845467.133164, ++++++++++++++ SYN_MT_REPORT ++++++++++++
+Event: time 1409845467.133167, -------------- SYN_REPORT ------------
+
+...
+
+Event: time 1409845469.216857, type 3 (EV_ABS), code 48 (ABS_MT_TOUCH_MAJOR), value 1
+Event: time 1409845469.216863, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 207
+Event: time 1409845469.216867, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 376
+Event: time 1409845469.216871, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 1
+Event: time 1409845469.216875, ++++++++++++++ SYN_MT_REPORT ++++++++++++
+Event: time 1409845469.216878, -------------- SYN_REPORT ------------
+Event: time 1409845469.230419, type 1 (EV_KEY), code 330 (BTN_TOUCH), value 0
+Event: time 1409845469.230423, ++++++++++++++ SYN_MT_REPORT ++++++++++++
+Event: time 1409845469.230426, -------------- SYN_REPORT ------------
+
+
