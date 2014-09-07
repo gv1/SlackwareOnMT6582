@@ -21,8 +21,3 @@ t: XCalc
 i: /opt/local/sw/share/icons/wm-icons/32x32-gant/restart.png
 c: LD_LIBRARY_PATH= /system/bin/sh /android.tmp/exitfromslackware.sh 
 t: Backto Android
-
-i: /opt/local/sw/share/icons/wm-icons/32x32-gant/window-close.png
-c: sleep 1 && xkill
-t: XKill
-
