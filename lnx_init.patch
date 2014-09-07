@@ -1,0 +1,57 @@
+--- xorg-server-1.12.2.org/hw/xfree86/os-support/linux/lnx_init.c	2012-05-17 22:39:03.000000000 +0530
++++ xorg-server-1.12.2/hw/xfree86/os-support/linux/lnx_init.c	2014-09-04 22:53:13.450000054 +0530
+@@ -48,15 +48,18 @@
+ static void
+ drain_console(int fd, void *closure)
+ {
++#ifdef GV
+     errno = 0;
+     if (tcflush(fd, TCIOFLUSH) == -1 && errno == EIO) {
+         xf86SetConsoleHandler(NULL, NULL);
+     }
++#endif
+ }
+ 
+ static void
+ switch_to(int vt, const char *from)
+ {
++#ifdef GV
+     int ret;
+ 
+     SYSCALL(ret = ioctl(xf86Info.consoleFd, VT_ACTIVATE, vt));
+@@ -66,11 +69,13 @@
+     SYSCALL(ret = ioctl(xf86Info.consoleFd, VT_WAITACTIVE, vt));
+     if (ret < 0)
+         FatalError("%s: VT_WAITACTIVE failed: %s\n", from, strerror(errno));
++#endif
+ }
+ 
+ void
+ xf86OpenConsole(void)
+ {
++#ifdef GV
+     int i, fd = -1, ret;
+     struct vt_mode VT;
+     struct vt_stat vts;
+@@ -249,11 +254,13 @@
+             switch_to(xf86Info.vtno, "xf86OpenConsole");
+         }
+     }
++#endif
+ }
+ 
+ void
+ xf86CloseConsole(void)
+ {
++#ifdef GV
+     struct vt_mode VT;
+     int ret;
+ 
+@@ -300,6 +307,7 @@
+         }
+     }
+     close(xf86Info.consoleFd);  /* make the vt-manager happy */
++#endif
+ }
+ 
+ int
