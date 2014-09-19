@@ -77,6 +77,17 @@ public class StartXActivity extends Activity {
 	installFile(null,R.raw.exitfromslackware, "/data/local/tmp/exitfromslackware.sh");
     }
 
+    private void installDotWbar()
+    {
+        installFile(null,R.raw.wbar, "/data/local/tmp/slackware/root/.wbar");
+    }
+
+    private void installXinitrc()
+    {
+        installFile(null,R.raw.xinitrc, "/data/local/tmp/slackware/root/.xinitrc");
+    }
+
+
     private void installStartXScript() {	
 	String start = "#!/system/bin/sh\n" + 
 	    "SWMNTDIR=" + getString(R.string.slackware_mount_dir) + "\n" + 
@@ -216,6 +227,8 @@ public class StartXActivity extends Activity {
 	installSlackwareInstallScript();
 	installXorgconf();
 	installExitScript();
+	installDotWbar();
+	installXinitrc();
     }
     
     @Override
